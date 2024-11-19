@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Xss | CyberEskisehir</title>
+</head>
+<body>
+<!-- 
+
+https://www.instagram.com/umutkyrdgn/
+https://x.com/CyberEskisehir
+https://www.instagram.com/cybereskisehir/
+-->
+
+
+<!-- Html -->
+
+<form action="">
+    <input type="text" name="username" id="username">
+    <button onclick="main()" type="button" >Execute!</button>
+</form>
+
+<div id="usernameviews">
+
+</div>
+
+
+<!-- Javascript -->
+
+<script>
+
+function main(){ 
+
+var user = document.getElementById('username').value;
+var result = document.getElementById('usernameviews').textContent = "Username: " +  user;
+
+}
+
+</script>
+
+</body>
+</html> 

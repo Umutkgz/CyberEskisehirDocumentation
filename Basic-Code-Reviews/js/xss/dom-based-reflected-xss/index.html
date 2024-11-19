@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Based \ Refltected xss</title>
+</head>
+<body>
+<!-- 
+https://www.instagram.com/umutkyrdgn/
+https://x.com/CyberEskisehir
+https://www.instagram.com/cybereskisehir/
+https://github.com/Umutkgz/Basic-Code-Reviews
+-->
+<!-- Html -->
+
+<form action="" method="GET">
+    <input type="text" name="username" id="username">
+    <button type="submit">Execute!</button>
+</form>
+
+<div id="usernameviews">
+
+</div>
+
+<!-- Javascript -->
+
+<script>
+    var params = new URLSearchParams(window.location.search);
+    if(params.has('username')){
+        var user = params.get('username');
+        document.getElementById('usernameviews').innerHTML = "Username: " + user;
+    }
+</script>
+
+</body>
+</html>
