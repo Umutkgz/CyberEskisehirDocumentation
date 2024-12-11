@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-xss</title>
+</head>
+<body>
+
+<input type="text" id="uri">
+<button type="button" onclick="redirect()">Click!</button>
+
+<script>
+
+function redirect(){
+    var result = document.getElementById('uri').value;
+    window.location.href = result
+}
+
+</script>
+
+</body>
+</html>
